@@ -1,9 +1,13 @@
 var express = require('express');
+var article = require('../node/model/article');
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+            console.log("==================="; res.render('index', {
+                    title: 'magiclane',
+                    articles: article
+                });
+            });
 
-module.exports = router;
+        module.exports = router;

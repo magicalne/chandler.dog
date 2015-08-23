@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.banner
+    h1.banner-info-1
+      | Get coding, get growing...
+  div.container-fluid.container-bg-color
+    div#category.left-div
+      h2
+        | Category
+      ul
+        each article in articles
+          li= article.title
+    div#content.left-div
+      
+    div#aboutme.left-div
+      | aboutme
