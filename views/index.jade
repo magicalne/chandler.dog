@@ -2,7 +2,7 @@ extends layout
 
 block content
   div.banner
-    h1.banner-info-1
+    h1.banner-info
       | Get coding, get growing...
   div.container-fluid.container-bg-color
     div#category.left-div
@@ -10,8 +10,11 @@ block content
         | Category
       ul
         each article in articles
-          li= article.title
+          li= article.value.title
     div#content.left-div
+      ul
+        each article in articles
+          li= article.value.content
       
     div#aboutme.left-div
       | aboutme
